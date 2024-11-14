@@ -40,6 +40,7 @@ const RateLimitDemo = () => {
 
       // Process successful response
       const data = await response.json();
+      console.log(data);
       setRemaining(currentRemaining);
       setLimit(currentLimit);
       setResetTime(new Date(resetTimestamp * 1000));
