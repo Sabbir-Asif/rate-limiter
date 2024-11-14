@@ -1,7 +1,11 @@
 const express = require('express');
 const app = express();
 const apiRoutes = require('./routes/apiRoutes');
+const cors = require('cors')
 
+app.use(cors({
+  exposedHeaders: ['X-RateLimit-Limit', 'X-RateLimit-Remaining', 'X-RateLimit-Reset']
+}));
 app.use(express.json());
 app.use('/api', apiRoutes);
 

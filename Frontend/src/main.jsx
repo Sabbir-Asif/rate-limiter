@@ -6,12 +6,17 @@ import {
 } from "react-router-dom";
 import "./index.css";
 import RateLimiter from "./Components/RateLimiter";
+import RateLimitDemo from "./Components/RateLimitDemo";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RateLimiter />
   },
+  {
+    path: '/autoRetry',
+    element: <RateLimitDemo />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
